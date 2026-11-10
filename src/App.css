@@ -139,3 +139,5 @@ h2 { font-size: clamp(2.5rem, 4.6vw, 4.5rem); font-weight: 1000; letter-spacing:
 @media (forced-colors: active) {
   .community-curve, .mission-thread { display: none; }
 }
+
+.footer-heart { color: var(--raspberry); }

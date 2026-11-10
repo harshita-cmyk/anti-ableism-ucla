@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react'
 import './App.css'
+import MeetTheTeam from './components/MeetTheTeam'
 
 const navigation = [
   { href: '#about', label: 'About' },
@@ -124,7 +125,7 @@ function OurMission() {
           {missionAreas.map(({ title, text }) => (
             <div className="mission-area" key={title}>
               <svg className="mission-thread" viewBox="0 0 48 160" preserveAspectRatio="none" fill="none" aria-hidden="true" focusable="false">
-                <path d="M24 0C24 17 44 21 40 36S4 54 8 34 32 22 24 58 12 122 24 160" stroke="var(--violet)" strokeWidth="4" />
+                <path d="M24 0C24 17 44 21 40 36S4 54 8 34 32 22 24 58 24 122 24 160" stroke="var(--violet)" strokeWidth="4" strokeLinecap="round" />
                 <path className="mission-thread-accent" d="M24 0C24 17 44 21 40 36S4 54 8 34" stroke="var(--violet)" strokeWidth="7" strokeLinecap="round" />
               </svg>
               <dt>{title}</dt>
@@ -174,7 +175,7 @@ function Footer() {
   return (
     <footer className="site-footer page-width">
       <a className="footer-home" href="#home">Anti-Ableism at UCLA</a>
-      <p>made with &lt;3 by <a href="https://www.linkedin.com/in/harshita-kukreja-28h/">Harshita</a></p>
+      <p>made with <span className="footer-heart">&lt;3</span> by <a href="https://www.linkedin.com/in/harshita-kukreja-28h/">Harshita</a></p>
     </footer>
   )
 }
@@ -190,6 +191,7 @@ function App() {
         <Introduction />
         <WhoWeAre />
         <OurMission />
+        <MeetTheTeam />
         <FeaturedProjects />
         <GetInvolved />
       </main>
