@@ -88,6 +88,55 @@ function Introduction() {
   )
 }
 
+function WhoWeAre() {
+  return (
+    <section className="who-we-are page-width" aria-labelledby="who-title">
+      <div className="who-title-group">
+        <h2 id="who-title">Who we are.</h2>
+        <svg className="community-curve" viewBox="0 0 440 170" fill="none" aria-hidden="true" focusable="false">
+          <path d="M12 141C79 62 288 7 367 43c88 40-126 139-174 83-37-43 109-83 235-19" stroke="var(--violet)" strokeWidth="18" strokeLinecap="round" />
+        </svg>
+      </div>
+      <div className="who-copy">
+        <p className="section-lead">Anti-Ableism at UCLA is a student-led association advocating for a more accessible campus for students and faculty.</p>
+      </div>
+    </section>
+  )
+}
+
+const missionAreas = [
+  { title: 'Policy & legislation', text: 'Question the policies and institutional decisions that shape campus access, and advocate for accountability.' },
+  { title: 'Activism & advocacy', text: 'Bring community perspectives into accessibility advocacy and collective action.' },
+  { title: 'Education & awareness', text: 'Build understanding of ableism and the barriers students and faculty encounter.' },
+  { title: 'Collaborative projects', text: 'Create opportunities to work together on campus accessibility concerns and document the work.' },
+]
+
+function OurMission() {
+  return (
+    <section className="mission-section" aria-labelledby="mission-title">
+      <div className="mission-inner page-width">
+        <div className="mission-intro">
+          <h2 id="mission-title">Our mission.</h2>
+          <p className="section-lead">Accessibility belongs in the decisions that shape campus life.</p>
+          <p>Through policy, activism, education, and collaborative projects, we aim to challenge barriers and support community participation in institutional change.</p>
+        </div>
+        <dl className="mission-areas">
+          {missionAreas.map(({ title, text }) => (
+            <div className="mission-area" key={title}>
+              <svg className="mission-thread" viewBox="0 0 48 160" preserveAspectRatio="none" fill="none" aria-hidden="true" focusable="false">
+                <path d="M24 0C24 17 44 21 40 36S4 54 8 34 32 22 24 58 12 122 24 160" stroke="var(--violet)" strokeWidth="4" />
+                <path className="mission-thread-accent" d="M24 0C24 17 44 21 40 36S4 54 8 34" stroke="var(--violet)" strokeWidth="7" strokeLinecap="round" />
+              </svg>
+              <dt>{title}</dt>
+              <dd>{text}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </section>
+  )
+}
+
 function FeaturedProjects() {
   return (
     <section className="projects page-width section-anchor" id="projects" aria-labelledby="projects-title" tabIndex={-1}>
@@ -139,6 +188,8 @@ function App() {
       <main id="main" tabIndex={-1}>
         <Hero />
         <Introduction />
+        <WhoWeAre />
+        <OurMission />
         <FeaturedProjects />
         <GetInvolved />
       </main>
