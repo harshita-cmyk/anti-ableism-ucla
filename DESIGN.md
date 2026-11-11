@@ -2,7 +2,7 @@
 
 ## Scope
 
-This brief guides the future website. It does not represent an implemented design system or a verified accessibility conformance claim. No website implementation is part of this document's creation.
+This brief guides the working React homepage prototype and future website. It is not a verified accessibility conformance claim. The homepage is being developed on `homepage-design`; full Projects and Join Us pages remain out of scope for V1.
 
 ## Organization and Audience
 
@@ -23,9 +23,19 @@ The website serves students and professionals interested in joining the organiza
 
 Introduce the organization, mission, story, and team. Provide clear paths to projects and participation. Use only supplied, approved organizational history and member information.
 
-Proposed homepage headline — **draft, pending approval**:
+Homepage headline — **approved for the working prototype, pending organizational sign-off**:
 
-> A more accessible UCLA, built together.
+> We question the fine print.
+
+Supporting text — **approved for the working prototype, pending organizational sign-off**:
+
+> From campus policies to everyday accessibility, we're challenging barriers through advocacy, education, and community-led projects.
+
+The headline foregrounds policy, institutional accountability, and advocacy. The supporting text includes the broader accessibility work and community-led projects. Avoid inspiration or overcoming narratives and tokenizing imagery; the identity centers the community's agency.
+
+V1 structure: header with the existing `public/AAA.png` logo, organization name and navigation; hero; supporting introduction; Featured Projects preview; Get Involved section; subtle footer credit. Keep Explore Projects and Get Involved equally prominent, linking to implemented sections. Use clearly labeled development placeholders for missing project and participation details, never invented initiatives or inactive controls.
+
+Mobile navigation uses an accessible hamburger disclosure with a visible Menu label, expanded state, keyboard operation, and Escape to close and return focus. Desktop navigation remains directly visible. The footer reads “made with <3 by Harshita,” with Harshita linking to https://www.linkedin.com/in/harshita-kukreja-28h/.
 
 ### Projects
 
@@ -37,7 +47,7 @@ Explain confirmed ways to participate and provide approved social links, contact
 
 ## Visual Direction
 
-Professional but playful: student-led, modern, welcoming, and credible. The design should communicate the seriousness of accessibility advocacy while leaving room for personality and creative composition.
+Approved Draft B is the primary visual reference: oversized, bold, rounded typography; warm cream reading surfaces; a lavender hero with dynamic violet ribbons and restrained raspberry accents inspired by the flowing silhouette of the existing logo. Preserve the professional-but-playful, community-centered identity and spacious, soothing layouts. Recreate this language in responsive React and CSS with independent decorative vector graphics, never a flat mockup background.
 
 Use thoughtful typography, generous spacing, and engaging layouts. Establish clear hierarchy and deliberate rhythm rather than filling every section with identical cards. Avoid generic AI-generated website aesthetics, ornamental clutter, and decorative effects that compete with content or comprehension.
 
@@ -47,17 +57,17 @@ Creativity must support accessibility. Express personality through composition, 
 
 | Color | Value | Intended role |
 | --- | --- | --- |
-| UCLA Blue | `#2774AE` | Primary brand color and emphasis |
-| UCLA Gold | `#FFD100` | Highlights and playful accents |
-| Deep Navy | `#003B5C` | Strong text, structure, and dark surfaces |
-| Lavender | `#D6C6F5` | Supporting accents and gentle section differentiation |
-| White | `#FFFFFF` | Clear backgrounds and breathing room |
+| Warm cream | `#FAF7F2` | Reading areas and background |
+| Dark ink | `#292238` | Primary text and structure |
+| Violet | `#5B34A5` | Actions and ribbon graphics |
+| Soft lavender | `#E7DDF5` | Hero and gentle section differentiation |
+| Raspberry | `#C42D63` | Selective graphical accents |
 
-These colors are the requested palette; their presence does not guarantee accessible pairings. Verify contrast for every actual foreground/background combination and interaction state. Favor dark text on light accent surfaces where appropriate. Never use color alone to convey status or meaning.
+These are exploratory prototype values, not finalized brand colors. Preserve the logo's existing colors. Verify contrast for every actual foreground/background combination and interaction state. Favor dark text on light accent surfaces where appropriate. Never use color alone to convey status or meaning.
 
 ### Typography and Layout
 
-- Choose readable typefaces with clear letterforms and a distinctive but restrained hierarchy; font families remain undecided.
+- Use locally hosted Nunito variable type for the prototype, with heavy rounded display lettering and readable body weights. Font choice remains subject to review.
 - Use comfortable line lengths, scalable text, and sufficient line height.
 - Keep reading and focus order aligned with the visual layout.
 - Adapt layouts to available space and content rather than relying on fixed device sizes.
@@ -83,7 +93,7 @@ Target **WCAG 2.2 Level AA** throughout implementation and verification. Accessi
 
 The organization description, website goals, page scope, visual direction, palette, and accessibility target in this brief are user-supplied requirements. They guide design; they are not blanket approval of future public-facing copy.
 
-The proposed headline is draft copy. Mark any additional proposed wording as draft until approved. Organizational history, project names and details, member identities and biographies, accomplishments, impact claims, and public contact information must come from supplied, approved sources.
+The selected headline and supporting paragraph are approved only for the working prototype, pending organizational sign-off. Mark additional proposed wording as draft until approved. Organizational history, project names and details, member identities and biographies, accomplishments, impact claims, and public contact information must come from supplied, approved sources.
 
 Do not invent organizational facts, testimonials, metrics, endorsements, or achievements. Do not infer official UCLA endorsement or permission to use institutional marks from the organization's name. Do not present planned submissions or intended outcomes as completed accomplishments.
 
@@ -91,9 +101,9 @@ Keep missing content explicitly identified in working documents rather than fill
 
 ## Decisions Still Open
 
-- Final public-facing copy, including headline approval and organizational story.
+- Organizational sign-off on the prototype headline and supporting text; final organizational story and remaining public-facing copy.
 - Project details, evidence, progress updates, and publication permissions.
 - Member information, portraits, and consent to publish.
 - Approved social links, contact information, and participation forms.
-- Font selection, approved identity assets, and applicable institutional branding requirements.
+- Final font and palette confirmation, additional approved identity assets, and applicable institutional branding requirements.
 - Final layouts and interaction details, to be developed and tested against this brief.

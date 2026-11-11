@@ -1,0 +1,34 @@
+.team-section { background: var(--cream); padding-block: clamp(3.5rem, 6vw, 6rem); }
+.team-content { max-width: 51rem; }
+.team-section h2 { margin-bottom: 2rem; }
+.team-heading-accent, .team-separator { color: var(--raspberry); }
+.team-development-note { margin-bottom: 2rem; max-width: 65ch; font-size: 1rem; line-height: 1.5; color: var(--violet); }
+.team-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2rem; margin: 0; padding: 0; list-style: none; }
+.team-profile { min-width: 0; }
+.team-portrait { display: block; width: min(100%, 11.25rem); height: auto; aspect-ratio: 1; border-radius: 12px; object-fit: cover; }
+.team-photo-placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .75rem; padding: .75rem; background: #e4d8f1; color: var(--violet); text-align: center; font-size: .8125rem; font-weight: 700; line-height: 1.4; overflow-wrap: anywhere; }
+.team-profile h3 { margin: 1rem 0 .4375rem; font-size: 1.5rem; line-height: 1.25; font-weight: 900; text-wrap: initial; }
+.team-role { font-weight: 600; color: #514065; }
+.team-role, .team-empty { font-size: 1rem; line-height: 1.5; }
+.team-separator { padding-inline: .125em; }
+.team-link { display: inline-flex; align-items: center; min-height: 44px; margin-top: .25rem; color: var(--violet); font-size: 1rem; font-weight: 700; }
+.team-link:hover { color: var(--ink); }
+.team-link:focus-visible { outline: 3px solid var(--violet); outline-offset: 4px; border-radius: 2px; }
+@media (max-width: 700px) {
+  .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem 1rem; }
+  .team-profile h3 { font-size: 1.3125rem; margin-top: .875rem; }
+  .team-section h2 { margin-bottom: 1.5rem; }
+  .team-development-note { margin-bottom: 1.5rem; }
+}
+
+.team-photo-placeholder svg { width: 30px; height: 30px; color: #7951a0; }
+.team-profile:nth-child(4n + 2) .team-photo-placeholder { background: #eddfeb; }
+.team-profile:nth-child(4n + 3) .team-photo-placeholder { background: #e9e0f3; }
+.team-profile:nth-child(4n + 4) .team-photo-placeholder { background: #f0dde3; }
+
+.team-link { gap: .4rem; font-weight: 400; text-decoration: none; }
+a.team-link:hover { text-decoration: underline; }
+.team-link svg { width: 1.1em; height: 1.1em; flex-shrink: 0; }
+.team-link-placeholder:hover { color: var(--violet); }
+
+button.team-link-placeholder { padding: 0; border: 0; background: transparent; font-family: inherit; cursor: not-allowed; }
