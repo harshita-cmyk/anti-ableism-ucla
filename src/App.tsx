@@ -5,11 +5,13 @@ import GetInvolved from './components/GetInvolved'
 import FeaturedProjects from './components/FeaturedProjects'
 import SiteFooter from './components/SiteFooter'
 import OurPartners from './components/OurPartners'
+import ProjectsPage from './pages/ProjectsPage'
+import { usePageRoute } from './hooks/usePageRoute'
 
 const navigation = [
-  { href: '#about', label: 'About' },
-  { href: '#projects', label: 'Projects' },
-  { href: '#get-involved', label: 'Get Involved' },
+  { href: '/#who-we-are', label: 'About' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/#get-involved', label: 'Get Involved' },
 ]
 
 function ActionLink({ href, children }: { href: string; children: ReactNode }) {
@@ -26,7 +28,7 @@ function Ribbon({ className = '' }: { className?: string }) {
   )
 }
 
-function Header() {
+function Header({ pathname }: { pathname: string }) {
   const [menuOpen, setMenuOpen] = useState(false)
   const menuButton = useRef<HTMLButtonElement>(null)
 
@@ -46,7 +48,7 @@ function Header() {
         menuButton.current?.focus()
       }
     }}>
-      <a className="brand" href="#home" aria-label="Anti-Ableism at UCLA — home">
+      <a className="brand" href="/#home" aria-label="Anti-Ableism at UCLA — home">
         <img src="/AAA.png" alt="" width="62" height="62" />
         <span>Anti-Ableism <span className="brand-location">at UCLA</span></span>
       </a>
@@ -57,7 +59,7 @@ function Header() {
         <span>Menu</span>
       </button>
       <nav id="main-navigation" aria-label="Main navigation" data-open={menuOpen}>
-        <ul>{navigation.map(({ href, label }) => <li key={href}><a href={href} onClick={() => setMenuOpen(false)}>{label}</a></li>)}</ul>
+        <ul>{navigation.map(({ href, label }) => <li key={href}><a href={href} aria-current={href === pathname ? 'page' : undefined} onClick={() => setMenuOpen(false)}>{label}</a></li>)}</ul>
       </nav>
     </header>
   )
@@ -86,7 +88,7 @@ function Introduction() {
         <p>From campus policies to everyday accessibility, we're challenging barriers through advocacy, education, and community-led projects.</p>
       </div>
       <div className="primary-actions">
-        <ActionLink href="#projects">Explore Projects</ActionLink>
+        <ActionLink href="/projects">Explore Projects</ActionLink>
         <ActionLink href="#get-involved">Get Involved</ActionLink>
       </div>
     </section>
@@ -95,7 +97,7 @@ function Introduction() {
 
 function WhoWeAre() {
   return (
-    <section className="who-we-are page-width" aria-labelledby="who-title">
+    <section className="who-we-are page-width section-anchor" id="who-we-are" aria-labelledby="who-title" tabIndex={-1}>
       <div className="who-title-group">
         <h2 id="who-title">Who we are.</h2>
         <svg className="community-curve" viewBox="0 0 440 170" fill="none" aria-hidden="true" focusable="false">
@@ -143,12 +145,14 @@ function OurMission() {
 }
 
 function App() {
+  const { pathname } = usePageRoute()
   return (
     <>
       <a className="skip-link" href="#main">Skip to main content</a>
-      <div id="home" />
-      <Header />
+      <div id="home" tabIndex={-1} />
+      <Header key={pathname} pathname={pathname} />
       <main id="main" tabIndex={-1}>
+        {pathname === '/projects' ? <ProjectsPage /> : <>
         <Hero />
         <Introduction />
         <WhoWeAre />
@@ -157,6 +161,7 @@ function App() {
         <FeaturedProjects />
         <OurPartners />
         <GetInvolved />
+        </>}
       </main>
       <SiteFooter />
     </>

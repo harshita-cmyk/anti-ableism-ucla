@@ -5,7 +5,7 @@ export default function SiteFooter() {
   return <footer className="homepage-footer">
     <div className="page-width">
       <div className="footer-main">
-        <a className="footer-organization" href="#home" aria-label="Anti-Ableism at UCLA — home">Anti-Ableism<br />at UCLA</a>
+        <a className="footer-organization" href="/#home" aria-label="Anti-Ableism at UCLA — home">Anti-Ableism<br />at UCLA</a>
         <div className="footer-link-group">
           <h2>Follow along</h2>
           <div className="footer-social-links">
