@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react'
 import './App.css'
 import MeetTheTeam from './components/MeetTheTeam'
+import GetInvolved from './components/GetInvolved'
 
 const navigation = [
   { href: '#about', label: 'About' },
@@ -151,20 +152,6 @@ function FeaturedProjects() {
           <h3>Space for our work</h3>
           <p className="development-label">Development placeholder</p>
           <p>Project details will appear here once they are ready to share. This is a layout preview, not a published initiative.</p>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-function GetInvolved() {
-  return (
-    <section className="involvement section-anchor" id="get-involved" aria-labelledby="involved-title" tabIndex={-1}>
-      <div className="involvement-inner page-width">
-        <h2 id="involved-title">Get involved.</h2>
-        <div className="involvement-copy">
-          <p>Interested in joining the organization or collaborating on an accessibility project?</p>
-          <p className="participation-placeholder"><strong>Development placeholder</strong><br />Participation details and contact information are still being confirmed. There is no sign-up form yet.</p>
         </div>
       </div>
     </section>
