@@ -1,0 +1,20 @@
+.partners-section { background: var(--cream); padding-block: clamp(3.5rem, 6vw, 6rem); }
+.partners-section h2 { margin-bottom: 1.25rem; }
+.partners-introduction { max-width: 65ch; font-size: 1.125rem; line-height: 1.6; margin-bottom: 2rem; }
+.partners-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.5rem; list-style: none; margin: 0; padding: 0; }
+.partners-grid li { min-width: 0; }
+.partner-logo-container { display: flex; align-items: center; justify-content: center; min-height: 10rem; height: 100%; padding: 1.5rem; background: #fff; color: var(--ink); text-decoration: none; }
+.partner-logo-container img { display: block; width: 100%; max-width: 12.5rem; height: 6rem; object-fit: contain; }
+.partner-placeholder { display: flex; flex-direction: column; align-items: center; gap: .75rem; text-align: center; overflow-wrap: anywhere; }
+.partner-name { font-size: 1rem; font-weight: 800; line-height: 1.4; }
+.partner-placeholder-label { font-size: .875rem; line-height: 1.4; }
+a.partner-logo-container:hover { text-decoration: underline; }
+a.partner-logo-container:focus-visible { outline: 3px solid var(--violet); outline-offset: 5px; }
+@media (max-width: 768px) {
+  .partners-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+  .partner-logo-container { padding: 1rem .5rem; }
+}
+
+.partners-grid img[src$="select-physical-therapy.png"] { max-width: 181px; }
+
+.partner-logo-container[data-partner="vista-center"] { background: #292238; color: #faf7f2; }

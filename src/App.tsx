@@ -2,6 +2,9 @@ import { useEffect, useRef, useState, type ReactNode } from 'react'
 import './App.css'
 import MeetTheTeam from './components/MeetTheTeam'
 import GetInvolved from './components/GetInvolved'
+import FeaturedProjects from './components/FeaturedProjects'
+import SiteFooter from './components/SiteFooter'
+import OurPartners from './components/OurPartners'
 
 const navigation = [
   { href: '#about', label: 'About' },
@@ -139,34 +142,6 @@ function OurMission() {
   )
 }
 
-function FeaturedProjects() {
-  return (
-    <section className="projects page-width section-anchor" id="projects" aria-labelledby="projects-title" tabIndex={-1}>
-      <div className="section-heading">
-        <h2 id="projects-title">Projects</h2>
-        <p>A public archive of our accessibility work.</p>
-      </div>
-      <div className="project-placeholder">
-        <div className="placeholder-art" aria-hidden="true"><span /><span /><span /></div>
-        <div className="placeholder-copy">
-          <h3>Space for our work</h3>
-          <p className="development-label">Development placeholder</p>
-          <p>Project details will appear here once they are ready to share. This is a layout preview, not a published initiative.</p>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-function Footer() {
-  return (
-    <footer className="site-footer page-width">
-      <a className="footer-home" href="#home">Anti-Ableism at UCLA</a>
-      <p>made with <span className="footer-heart">&lt;3</span> by <a href="https://www.linkedin.com/in/harshita-kukreja-28h/">Harshita</a></p>
-    </footer>
-  )
-}
-
 function App() {
   return (
     <>
@@ -180,9 +155,10 @@ function App() {
         <OurMission />
         <MeetTheTeam />
         <FeaturedProjects />
+        <OurPartners />
         <GetInvolved />
       </main>
-      <Footer />
+      <SiteFooter />
     </>
   )
 }
